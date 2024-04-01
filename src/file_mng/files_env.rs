@@ -12,7 +12,7 @@ impl FilesEnv {
         let basedir_path = Path::new(basedir).to_path_buf();
         let workdir_path = Path::new(&basedir_path).join(workfolder);
         let storagedir_path = Path::new(&basedir_path).join(storagefolder);
-        let gcode_path = Path::new(&basedir_path).join("run.gcode");
+        let gcode_path = Path::new(&workdir_path).join("run.gcode");
 
         Self {basedir_path, workdir_path, storagedir_path, gcode_path}
     }
